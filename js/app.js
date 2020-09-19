@@ -5,7 +5,7 @@ function questionOne (){
   if (q1==='yes'||q1==='y') {
   //console.log('Thank you ');
     alert('Thank you ');
-  }else if (q1==='no' || q1==='n'){
+  } if (q1==='no' || q1==='n'){
   //console.log('Oops!');
     alert('Oops!');
   } else{
@@ -104,21 +104,28 @@ var nTries =6;
 function questionSeven(){
   while (nTries >0){
     var q7 = prompt('Can you geuss how many hours it took for this assignment?it is between 1 and 20.');
-    if( q7 === correctAnswers){
-      alert('Congratulations! you win the game!');
-      break;
-    }else if(q7 < correctAnswers){
-      alert('Oops! your guess is too low!');
-    }else if (q7 > correctAnswers){
-      alert('Oops! your guess is too high!');
-    }else{
-      alert('wrog inserting!');
-    }
-    nTries = nTries -1;
-  }
+    q7 = Number(q7);
+    for (var i=0; i <= 6; i++){
+      if(correctAnswer[i] === q7)
 
-  if (nTries===0){
-    alert(`you lost your chance! the numbers are ${correctAnswers} , thank you for playing.`);
+      {
+        nTries=i;
+        alert('Congratulations! you win the game!');
+        break;
+      }else if(q7 < correctAnswers){
+        alert('Oops! your guess is too low!');
+      }else if (q7 > correctAnswers){
+        alert('Oops! your guess is too high!');
+      }else{
+        alert('wrog inserting!');
+      }
+      nTries = nTries -1;
+    }
+
+    if (nTries===0){
+      alert(`you lost your chance! the numbers are ${correctAnswers} , thank you for playing.`);
+    }
   }
 }
+
 questionSeven();
