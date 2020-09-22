@@ -19,11 +19,11 @@ function question1() {
 
 function question2() {
   var q2 = prompt('Do you think i graduated in low avarage?').toLowerCase();
-  if (q2 == 'yes' || q2 == 'y') {
+  if (q2 == 'no' || q2 == 'n') {
     //onsole.log('Ammazing,correct again '+userName);
     alert('Ammazing,correct again ' + userName);
     count++;
-  } else if (q2 == 'no' || q2 == 'n') {
+  } else if (q2 == 'yes' || q2 == 'y') {
     // console.log('Oops,incorrect '+ userName);
     alert('Oops,incorrect ' + userName);
   } else {
