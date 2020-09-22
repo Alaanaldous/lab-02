@@ -109,7 +109,7 @@ function questionSeven(){
       if(correctAnswer[i] === q7)
 
       {
-        nTries=i;
+
         alert('Congratulations! you win the game!');
         break;
       }else if(q7 < correctAnswers){
